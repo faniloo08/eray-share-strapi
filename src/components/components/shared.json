@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_components_shareds",
+  "info": {
+    "displayName": "Shared",
+    "icon": "cube"
+  },
+  "options": {},
+  "attributes": {
+    "Body": {
+      "type": "richtext"
+    }
+  }
+}
