@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "utilisateurs",
+  "info": {
+    "singularName": "utilisateur",
+    "pluralName": "utilisateurs",
+    "displayName": "utilisateur",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstname": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "password": {
+      "type": "password"
+    },
+    "profilepic": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "address": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "formateurs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::formateur.formateur"
+    },
+    "etudiant": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::etudiant.etudiant"
+    }
+  }
+}
