@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "factures",
+  "info": {
+    "singularName": "facture",
+    "pluralName": "factures",
+    "displayName": "facture",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "payementmethod": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "decimal"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "status": {
+      "type": "boolean"
+    },
+    "course": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::course.course"
+    }
+  }
+}
