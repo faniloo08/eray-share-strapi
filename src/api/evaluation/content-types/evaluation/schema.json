@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "evaluations",
+  "info": {
+    "singularName": "evaluation",
+    "pluralName": "evaluations",
+    "displayName": "Evaluation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "grade": {
+      "type": "integer",
+      "required": true
+    },
+    "feedback": {
+      "type": "text"
+    },
+    "course": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::course.course",
+      "inversedBy": "evaluation"
+    },
+    "etudiant": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::etudiant.etudiant",
+      "inversedBy": "evaluation"
+    }
+  }
+}
