@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "formateurs",
+  "info": {
+    "singularName": "formateur",
+    "pluralName": "formateurs",
+    "displayName": "Formateur",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Id_card": {
+      "type": "uid"
+    },
+    "CV": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "files",
+        "images"
+      ]
+    },
+    "VISAcard": {
+      "type": "biginteger"
+    },
+    "biography": {
+      "type": "text"
+    },
+    "courses": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::course.course",
+      "inversedBy": "formateurs"
+    },
+    "utilisateur": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::utilisateur.utilisateur",
+      "mappedBy": "formateur"
+    },
+    "payes_formateur": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::payes-formateur.payes-formateur",
+      "mappedBy": "formateur"
+    },
+    "Username": {
+      "type": "string"
+    }
+  }
+}
