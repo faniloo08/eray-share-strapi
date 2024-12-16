@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payes_formateurs",
+  "info": {
+    "singularName": "payes-formateur",
+    "pluralName": "payes-formateurs",
+    "displayName": "Payes-formateur",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date": {
+      "type": "datetime"
+    },
+    "amount": {
+      "type": "decimal"
+    },
+    "payementmethod": {
+      "type": "string"
+    },
+    "formateur": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::formateur.formateur",
+      "inversedBy": "payes_formateur"
+    }
+  }
+}
