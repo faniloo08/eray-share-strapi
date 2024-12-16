@@ -1,57 +1,28 @@
-# 🚀 Getting started with Strapi
+# first, clone the projet
+using **git.clone**
+# Then, run it localy 
+**npm run start**
+This will start the server at localhost:1337
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+Now you will enter the strapi admin interface 
+Enter your login info and see what strapi collections are
 
-### `develop`
+In this project, these are the collections : 
+## Courses : the main content, as the project is envolved in elarning. 
+## Etudiants : one type of users, the student, supposed to only comment courses and interact with the contents
+## Formateurs : the type of users that actually "create" the courses, the professors
+## Commentaires : comments submitted by the students about any courses
+## Facture : the bills payed by the professors when they submit their courses
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
+## And so on, please check the collection-types to see them all
 
-```
-npm run develop
-# or
-yarn develop
-```
+## Check the content-type builder to see what are the fields and relations in these collections
 
-### `start`
+I have already seeded some datas in **./temp/data.db** for the test, you can check them by :
+- Going to **./temp**
+- Run **sqlite3 daba.db** in your terminal
+- Check **.tables** to see the exhaustive lists of tables created
+- Run the SQL query **SELECT * FROM (any table name in there)** to see the contains of the table
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
-
-```
-npm run start
-# or
-yarn start
-```
-
-### `build`
-
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
-
-```
-npm run build
-# or
-yarn build
-```
-
-## ⚙️ Deployment
-
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
-
-## 📚 Learn more
-
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
-
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
-
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
-
----
-
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+To access the APIs, I had set up a simple way to do so in the **test folder** so we can access the data easily.
+I chose the **Courses** example but any content will follow the same logic and pattern. For instance, to access the title of the 1st courses, the appropriate format will be **Courses[0].titre**, its description at : **Courses[0].description** and the whole course information at **Courses[0]**
