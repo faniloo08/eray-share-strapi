@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "etudiants",
+  "info": {
+    "singularName": "etudiant",
+    "pluralName": "etudiants",
+    "displayName": "etudiant",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "preferences": {
+      "type": "string"
+    },
+    "Iagree": {
+      "type": "boolean"
+    },
+    "Username": {
+      "type": "string"
+    },
+    "utilisateur": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::utilisateur.utilisateur",
+      "mappedBy": "etudiant"
+    },
+    "evaluation": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::evaluation.evaluation",
+      "mappedBy": "etudiant"
+    }
+  }
+}
