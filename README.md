@@ -24,5 +24,5 @@ I have already seeded some datas in **./temp/data.db** for the test, you can che
 - Check **.tables** to see the exhaustive lists of tables created
 - Run the SQL query **SELECT * FROM (any table name in there)** to see the contains of the table
 
-To access the APIs, I had set up a simple way to do so in the **test folder** so we can access the data easily.
+To access the APIs, I had set up a simple way to do so in the **TestAPI folder** so we can access the data easily.
 I chose the **Courses** example but any content will follow the same logic and pattern. For instance, to access the title of the 1st courses, the appropriate format will be **Courses[0].titre**, its description at : **Courses[0].description** and the whole course information at **Courses[0]**
